@@ -133,6 +133,25 @@ var pointBuy = function () {
 		}
 	];
 	
+	function private_updateTotalAbility(ability) {
+		var abilityRow = document.getElementById(ability+"-row");
+		var abilityPurchase = abilityRow.getElementsByClassName("purchase");
+		abilityPurchase = parseInt(abilityPurchase[0].value);
+
+		var racialMod = abilityRow.getElementsByClassName("racial-mod");
+		racialMod = parseInt(racialMod[0].value);
+		
+		abilityRow.getElementsByClassName("calculated-stat")[0].innerHTML = abilityPurchase + racialMod;
+	}
+	
+	function private_updateAllAbilities() {
+		var abilities = document.querySelectorAll(".row .dropdown select");
+		for (var i = 0, count = abilities.length; i < count; i++) {
+			abilities[i].dispatchEvent(new Event('change'));
+		}
+
+	}
+	
 	function private_updateRaceList() {
 		document.getElementById("race").innerHTML="";
 		var selectedRaces = races.filter(race => race.list < lists[document.getElementById("race-list").value]);
@@ -161,7 +180,11 @@ var pointBuy = function () {
 		} else {
 			private_lockRacialMods();
 		}
+		
+		private_updateAllAbilities();
 	}
+	
+	
 	
 	function private_unlockRacialMods() {
 		var mods = document.querySelectorAll(".racial-mod");
@@ -197,11 +220,20 @@ var pointBuy = function () {
 	function private_updateArrayBox() {
 	}
 	
-	function private_setCostCalculations() {
+	function private_setAbilityCalculations() {
 		var dropdowns = document.querySelectorAll(".row .dropdown select");
 		for (var i = 0, dCount = dropdowns.length; i < dCount; i++) {
 			dropdowns[i].addEventListener('change', function () {
 				private_updateCost(this.id);
+				private_updateTotalAbility(this.id);
+			});
+		}
+
+		var modifiers = document.querySelectorAll(".racial-mod");
+		var expression = new RegExp('^[^\-]+');
+		for (var i = 0, count = modifiers.length; i < count; i++) {
+			modifiers[i].addEventListener('change', function () {
+				private_updateTotalAbility(this.id.match(expression)[0]);
 			});
 		}
 	}
@@ -215,9 +247,8 @@ var pointBuy = function () {
 		});
 	}
 
-
 	function private_setup() {
-		private_setCostCalculations();
+		private_setAbilityCalculations();
 		private_setRaceListUpdates()
 		
 		private_updateRaceList();
