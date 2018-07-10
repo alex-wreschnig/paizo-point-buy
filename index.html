@@ -1,0 +1,270 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Pathfinder and Starfinder Point Buy</title>
+	<meta name="description" content="Point buy application for character creation for Pathfinder and Starfinder.">
+	<meta name="author" content="Alex Wreschnig">
+
+	<link rel="stylesheet" href="ui/css/point-buy.css?v=1.0">
+
+	<script async src="ui/js/removeAllEventListeners.js"></script>
+	<script async src="ui/js/point-buy.js"></script>
+
+</head>
+
+<body>
+
+	<div class="page">
+	
+		<header>
+			Pittsburgh Pathfinder Society
+		</header>
+		
+		<section class="point-buy">
+			<h1>Point Buy Calculator</h1>
+			
+			<section>
+				<div class="race-categories">
+					<label for="race-list">Race List:</label>
+					<select name="race-list" id="race-list">
+						<option value="core">Core Only</option>
+						<option value="pfs">PFS Races</option>
+						<option value="boon">PFS Boon Races</option>
+						<option value="all">All Races</option>
+					</select>
+				</div>
+				<div class="race-selection">
+					<label for="race">Choose a Race:</label>
+					<select name="race" id="race">
+
+					</select>
+				</div>
+			</section>
+			
+			<section>
+				<div class="row header">
+					<div class="label-container">
+						Ability Score
+					</div>
+					<div class="dropdown">
+						Purchased
+					</div>
+					<div class="cost">
+						Cost
+					</div>
+					<div class="racial-mod-box">
+						Racial Mod
+					</div>
+					<div class="calculated-stat strength-calculated">
+						Final
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="strength">Strength</label>
+					</div>
+					<div class="dropdown">
+						<select id="strength" name="strength" >
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost" id="strength-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="strength-racial" name="strength-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat strength-calculated">
+						10
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="dexterity">Dexterity</label>
+					</div>
+					<div class="dropdown">
+						<select name="dexterity" id="dexterity">
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost" id="dexterity-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="dexterity-racial" name="dexterity-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat dexterity-calculated">
+						10
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="constitution">Constitution</label>
+					</div>
+					<div class="dropdown">
+						<select name="constitution" id="constitution">
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost" id="constitution-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="constitution-racial" name="constitution-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat constitution-calculated">
+						10
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="intelligence">Intelligence</label>
+					</div>
+					<div class="dropdown">
+						<select name="intelligence" id="intelligence">
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost" id="intelligence-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="intelligence-racial" name="intelligence-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat intelligence-calculated">
+						10
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="wisdom">Wisdom</label>
+					</div>
+					<div class="dropdown">
+						<select name="wisdom" id="wisdom">
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost"  id="wisdom-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="wisdom-racial" name="wisdom-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat wisdom-calculated">
+						10
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="label-container">
+						<label for="charisma">Charisma</label>
+					</div>
+					<div class="dropdown">
+						<select name="charisma" id="charisma">
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10" selected="selected">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+						</select>
+					</div>
+					<div class="cost"  id="charisma-cost">
+						0
+					</div>
+					<div class="racial-mod-box">
+						<input type="text" class="racial-mod" id="charisma-racial" name="charisma-racial" disabled="disabled" value="0" />
+					</div>
+					<div class="calculated-stat charisma-calculated">
+						10
+					</div>
+				</div>
+
+			</section>
+			
+			<section class="summary">
+				<div class="total">
+					Total Points: <span class="">0</span>
+				</div>
+				<div class="array-copy">
+					<input type="text" class="array-box" value="STR 10 / DEX 10 / CON 10 / INT 10 / WIS 10 / CHA 10" />
+				</div>
+			</section>
+			
+		</section>
+		
+		<footer>
+		</footer>
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+html {
+  font-size: 62.5%;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 10rem 1fr 10rem;
+  grid-template-columns: 1fr 70rem 1fr;
+  grid-column-gap: 1rem;
+}
+.page > header, .page > section, .page > footer {
+  border-left: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  padding: 1rem;
+}
+.page > header {
+  border-top: 0.1rem solid black;
+}
+.page > footer {
+  border-bottom: 0.1rem solid black;
+}
+
+header {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+section {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+footer {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.point-buy {
+  font-size: 2.2rem;
+}
+.point-buy .row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+.point-buy .row.header {
+  font-size: 2.4rem;
+  font-variant: small-caps;
+  border-bottom: 0.2rem solid black;
+}
+.point-buy .row:not(.header) .label-container, .point-buy .row:not(.header) .calculated-stat {
+  font-size: 3rem;
+}
+.point-buy .row:not(.header):not(:last-child) {
+  border-bottom: 0.1rem solid black;
+}
+.point-buy .row:last-child {
+  border-bottom: 0.2rem solid black;
+}
+.point-buy .row .label-container {
+  width: 25%;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+.point-buy .row .dropdown {
+  width: 25%;
+  text-align: center;
+}
+.point-buy .row .dropdown select {
+  font-size: 2rem;
+}
+.point-buy .row .cost {
+  width: 10%;
+  text-align: center;
+}
+.point-buy .row .racial-mod-box {
+  width: 30%;
+  text-align: center;
+}
+.point-buy .row .racial-mod-box input {
+  font-size: 2rem;
+  width: 3rem;
+  text-align: center;
+}
+.point-buy .row .calculated-stat {
+  width: 10%;
+}
+
+/*# sourceMappingURL=point-buy.css.map */
