@@ -1,5 +1,12 @@
 var pointBuy = function () {
 
+	var lists = {
+		"core":2,
+		"pfs":3,
+		"boon":4,
+		"all":5
+	};
+
 	var costs = {
 		"7": "-4",
 		"8": "-2",
@@ -116,6 +123,8 @@ var pointBuy = function () {
 	
 	function private_updateRaceList() {
 		
+		var selectedRaces = races.filter(race => race.list < lists[document.getElementById("race-list").value]);
+		console.log(selectedRaces);
 	}
 	
 	function private_updateRaces() {
@@ -130,9 +139,18 @@ var pointBuy = function () {
 	function private_updateCost(targetID) {
 		var target = document.getElementById(targetID);
 		document.getElementById(targetID+"-cost").innerHTML = costs[target.value];
+		private_updateTotalCost();
 	}
 	
 	function private_updateTotalCost() {
+		var costArrays = [].slice.call(document.querySelectorAll(".row.data .cost"));
+		var costs = costArrays.map(function(x) {
+			return parseInt(x.innerHTML);
+		});
+		var cost = costs.reduce(function(accumulator, currentValue) {
+			return accumulator+currentValue;
+		});
+		document.getElementById("total-points").innerHTML = cost;
 	}
 	
 	function private_updateArrayBox() {
@@ -150,6 +168,7 @@ var pointBuy = function () {
 
 	function private_setup() {
 		private_setCostCalculations();
+		private_updateRaceList()
 	}
 
 	return {
