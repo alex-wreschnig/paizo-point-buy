@@ -108,6 +108,18 @@ var pointBuy = function () {
 			"charisma": 2
 		},
 		{
+			"name": "Ifrit",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 2,
+			"constitution": 0,
+			"intelligence": 0,
+			"wisdom": -2,
+			"charisma": 2
+		},
+		{
 			"name": "Custom",
 			"list": 1,
 			"custom": 1,
@@ -122,8 +134,11 @@ var pointBuy = function () {
 	];
 	
 	function private_updateRaceList() {
-		
+		document.getElementById("race").innerHTML="";
 		var selectedRaces = races.filter(race => race.list < lists[document.getElementById("race-list").value]);
+		selectedRaces.map(function(race) {
+			document.getElementById("race").innerHTML+= "<option value=\""+race["name"].toLowerCase()+"\">"+race["name"]+"</option>";
+		});
 		console.log(selectedRaces);
 	}
 	
@@ -165,10 +180,16 @@ var pointBuy = function () {
 		}
 	}
 
+	function private_setRaceListUpdates() {
+		document.getElementById("race-list").addEventListener('change', function () {
+			private_updateRaceList();
+		});
+	}
+
 
 	function private_setup() {
 		private_setCostCalculations();
-		private_updateRaceList()
+		private_setRaceListUpdates()
 	}
 
 	return {
