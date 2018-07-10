@@ -142,6 +142,8 @@ var pointBuy = function () {
 		racialMod = parseInt(racialMod[0].value);
 		
 		abilityRow.getElementsByClassName("calculated-stat")[0].innerHTML = abilityPurchase + racialMod;
+		
+		private_updateArrayBox();
 	}
 	
 	function private_updateAllAbilities() {
@@ -158,14 +160,12 @@ var pointBuy = function () {
 		selectedRaces.map(function(race) {
 			document.getElementById("race").innerHTML+= "<option value=\""+race["name"].toLowerCase()+"\">"+race["name"]+"</option>";
 		});
-		console.log(selectedRaces);
+		private_updateRaces();
 	}
 	
 	function private_updateRaces() {
-		console.log(document.getElementById("race").value);
 		var raceSelected = races.filter(race => race.name.toLowerCase() == document.getElementById("race").value);
 		raceSelected = raceSelected[0];
-		console.log(document.getElementById("race-note"));
 		document.getElementById("race-note").innerHTML = raceSelected["note"];
 		
 		document.getElementById("strength-racial").value = raceSelected["strength"];
@@ -218,6 +218,15 @@ var pointBuy = function () {
 	}
 	
 	function private_updateArrayBox() {
+		var strength = parseInt(document.getElementById("strength-calculated").innerHTML);
+		var dexterity = parseInt(document.getElementById("dexterity-calculated").innerHTML);
+		var constitution = parseInt(document.getElementById("constitution-calculated").innerHTML);
+		var intelligence = parseInt(document.getElementById("intelligence-calculated").innerHTML);
+		var wisdom = parseInt(document.getElementById("wisdom-calculated").innerHTML);
+		var charisma = parseInt(document.getElementById("charisma-calculated").innerHTML);
+		
+		var arrayBox = document.getElementById("array-box");
+		arrayBox.value = "STR " + strength + " / DEX " + dexterity + " / CON " + constitution + " / INT " + intelligence + " / WIS " + wisdom + " / CHA " + charisma;
 	}
 	
 	function private_setAbilityCalculations() {
