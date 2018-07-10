@@ -24,7 +24,12 @@
 		</header>
 		
 		<section class="point-buy">
-			<h1>Point Buy Calculator</h1>
+			<h1>
+				<select name="system" id="system">
+					<option value="pathfinder">Pathfinder</option>
+				</select>
+				Point Buy Calculator
+			</h1>
 			
 			<section class="key">
 				<div class="race-categories">
@@ -261,7 +266,8 @@
 					Total Points: <span id="total-points">0</span>
 				</div>
 				<div class="array-copy">
-					<input type="text" class="array-box" name="array-box" id="array-box" value="STR 10 / DEX 10 / CON 10 / INT 10 / WIS 10 / CHA 10" disabled="disabled" />
+					<input type="text" class="array-box" name="array-box" id="array-box" value="STR 10 / DEX 10 / CON 10 / INT 10 / WIS 10 / CHA 10"  />
+					<button id="copy-array">Copy</button>
 				</div>
 			</section>
 			
