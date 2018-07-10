@@ -143,12 +143,38 @@ var pointBuy = function () {
 	}
 	
 	function private_updateRaces() {
+		console.log(document.getElementById("race").value);
+		var raceSelected = races.filter(race => race.name.toLowerCase() == document.getElementById("race").value);
+		raceSelected = raceSelected[0];
+		console.log(document.getElementById("race-note"));
+		document.getElementById("race-note").innerHTML = raceSelected["note"];
+		
+		document.getElementById("strength-racial").value = raceSelected["strength"];
+		document.getElementById("dexterity-racial").value = raceSelected["dexterity"];
+		document.getElementById("constitution-racial").value = raceSelected["constitution"];
+		document.getElementById("intelligence-racial").value = raceSelected["intelligence"];
+		document.getElementById("wisdom-racial").value = raceSelected["wisdom"];
+		document.getElementById("charisma-racial").value = raceSelected["charisma"];
+		
+		if(raceSelected.custom == 1) {
+			private_unlockRacialMods();
+		} else {
+			private_lockRacialMods();
+		}
 	}
 	
 	function private_unlockRacialMods() {
+		var mods = document.querySelectorAll(".racial-mod");
+		for (var i = 0, count = mods.length; i < count; i++) {
+			mods[i].disabled = false;
+		}
 	}
 	
 	function private_lockRacialMods() {
+		var mods = document.querySelectorAll(".racial-mod");
+		for (var i = 0, count = mods.length; i < count; i++) {
+			mods[i].disabled = true;
+		}
 	}
 	
 	function private_updateCost(targetID) {
@@ -184,12 +210,18 @@ var pointBuy = function () {
 		document.getElementById("race-list").addEventListener('change', function () {
 			private_updateRaceList();
 		});
+		document.getElementById("race").addEventListener('change', function () {
+			private_updateRaces();
+		});
 	}
 
 
 	function private_setup() {
 		private_setCostCalculations();
 		private_setRaceListUpdates()
+		
+		private_updateRaceList();
+		private_updateRaces();
 	}
 
 	return {
