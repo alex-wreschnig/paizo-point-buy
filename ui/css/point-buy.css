@@ -38,6 +38,26 @@ footer {
 .point-buy {
   font-size: 2.2rem;
 }
+.point-buy section.key {
+  display: flex;
+  font-size: 1.6rem;
+}
+.point-buy section.key label, .point-buy section.key .race-note-label {
+  display: block;
+  border-bottom: 0.1rem solid black;
+  min-width: 2rem;
+  margin-bottom: 1rem;
+}
+.point-buy section.key > div {
+  padding: 1rem;
+}
+.point-buy section.key select {
+  font-size: 2rem;
+  max-width: 20rem;
+}
+.point-buy section.key #race-note {
+  font-size: 2rem;
+}
 .point-buy .row {
   display: flex;
   align-items: center;
