@@ -4,14 +4,13 @@ html {
 
 .page {
   display: grid;
-  grid-template-rows: 10rem 1fr 10rem;
+  grid-template-rows: 10rem 1fr 15rem;
   grid-template-columns: 1fr 70rem 1fr;
   grid-column-gap: 1rem;
 }
 .page > header, .page > section, .page > footer {
   border-left: 0.1rem solid black;
   border-right: 0.1rem solid black;
-  padding: 1rem;
 }
 .page > header {
   border-top: 0.1rem solid black;
@@ -23,6 +22,24 @@ html {
 header {
   grid-row: 1/2;
   grid-column: 2/3;
+  font-size: 4rem;
+  text-align: center;
+  border-bottom: 0.2rem solid black;
+  padding-top: 3rem;
+  background: #f2cc93;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f2cc93 0%, #c19e67 26%, #c19e67 33%, #c19e67 47%, #a67d3c 77%, #866d3c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2cc93 0%, #c19e67 26%, #c19e67 33%, #c19e67 47%, #a67d3c 77%, #866d3c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2cc93 0%, #c19e67 26%, #c19e67 33%, #c19e67 47%, #a67d3c 77%, #866d3c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f2cc93", endColorstr="#e9d4b3",GradientType=0 );
+  /* IE6-9 */
+}
+header a {
+  text-decoration: none;
+  color: white;
 }
 
 section {
@@ -33,10 +50,15 @@ section {
 footer {
   grid-row: 3/4;
   grid-column: 2/3;
+  font-size: 1.4rem;
+  padding: 3rem 2rem 2rem 2rem;
 }
 
 .point-buy {
   font-size: 2.2rem;
+}
+.point-buy h1 {
+  text-align: center;
 }
 .point-buy h1 select {
   font-size: 2.8rem;
@@ -56,10 +78,13 @@ footer {
 }
 .point-buy section.key select {
   font-size: 2rem;
-  max-width: 20rem;
+  width: 16rem;
 }
 .point-buy section.key #race-note {
   font-size: 2rem;
+}
+.point-buy section.key .race-note-label {
+  min-width: 10rem;
 }
 .point-buy .row {
   display: flex;
@@ -107,6 +132,30 @@ footer {
 }
 .point-buy .row .calculated-stat {
   width: 10%;
+}
+.point-buy .total {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 1rem 0;
+}
+.point-buy .total #total-points {
+  font-size: 3.6rem;
+}
+.point-buy .array-copy {
+  text-align: center;
+}
+.point-buy .array-copy h2 {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.point-buy .array-copy input, .point-buy .array-copy button {
+  font-size: 1.8rem;
+  padding: 0.2rem 0.5rem;
+}
+.point-buy .array-copy input {
+  width: 45rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=point-buy.css.map */

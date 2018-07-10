@@ -4,7 +4,7 @@ html {
 
 .page {
 	display: grid;
-	grid-template-rows: 10rem 1fr 10rem;
+	grid-template-rows: 10rem 1fr 15rem;
 	grid-template-columns: 1fr 70rem 1fr;
 	grid-column-gap: 1rem;
 	
@@ -12,7 +12,6 @@ html {
 	{
                        	border-left: .1rem solid black;
                 	border-right: .1rem solid black;
-                	padding: 1rem;
 	}
 	>header {
 		border-top: .1rem solid black;
@@ -25,6 +24,22 @@ html {
 header {
 	grid-row: 1/2;
 	grid-column: 2/3;
+	font-size: 4rem;
+	text-align: center;
+	border-bottom: .2rem solid black;
+	padding-top: 3rem;
+
+	background: #f2cc93; /* Old browsers */
+	background: -moz-linear-gradient(top, #f2cc93 0%, #c19e67 26%, #c19e67 33%, #c19e67 47%, #a67d3c 77%, #866d3c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #f2cc93 0%,#c19e67 26%,#c19e67 33%,#c19e67 47%,#a67d3c 77%,#866d3c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #f2cc93 0%,#c19e67 26%,#c19e67 33%,#c19e67 47%,#a67d3c 77%,#866d3c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2cc93', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+
+	
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 section {
@@ -35,12 +50,15 @@ section {
 footer {
 	grid-row: 3/4;
 	grid-column: 2/3;
+	font-size: 1.4rem;
+	padding: 3rem 2rem 2rem 2rem;
 }
 
 .point-buy {
 	font-size: 2.2rem;
 	
 	h1 {
+		text-align: center;
 		select {
 			font-size: 2.8rem;
 		}
@@ -60,10 +78,13 @@ footer {
 		}
 		select {
 			font-size: 2rem;
-			max-width: 20rem;
+			width: 16rem;
 		}
 		#race-note {
 			font-size: 2rem;
+		}
+		.race-note-label {
+			min-width: 10rem;
 		}
 	}
 	.row {
@@ -117,6 +138,29 @@ footer {
 			width: 10%;
 		}
 	}
-	
+	.total {
+		text-align: center;
+		font-size: 2.6rem;
+		margin: 1rem 0;
+		#total-points {
+			font-size: 3.6rem;
+		}
+	}
+	.array-copy {
+		text-align: center;
+		h2 {
+			font-size: 2rem;
+			padding: 0;
+			margin: 0;
+		}
+		input, button {
+			font-size: 1.8rem;
+			padding: .2rem .5rem;
+		}
+		input {
+			width: 45rem;
+			text-align: center;
+		}
+	}
 }
 
