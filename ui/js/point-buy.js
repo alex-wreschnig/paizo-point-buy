@@ -120,6 +120,30 @@ var pointBuy = function () {
 			"charisma": 2
 		},
 		{
+			"name": "Ifrit (Magma Ifrit)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": -2,
+			"constitution": 2,
+			"intelligence": 2,
+			"wisdom": 0,
+			"charisma": 0
+		},
+		{
+			"name": "Ifrit (Solar Ifrit)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 2,
+			"dexterity": 0,
+			"constitution": 0,
+			"intelligence": 0,
+			"wisdom": -2,
+			"charisma": 2
+		},
+		{
 			"name": "Kitsune",
 			"list": 2,
 			"custom": 0,
@@ -156,6 +180,30 @@ var pointBuy = function () {
 			"charisma": -2
 		},
 		{
+			"name": "Oread (Crystal Oread)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 2,
+			"dexterity": 0,
+			"constitution": 0,
+			"intelligence": 0,
+			"wisdom": -2,
+			"charisma": 2
+		},
+		{
+			"name": "Oread (Metal Oread)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": -2,
+			"constitution": 2,
+			"intelligence": 0,
+			"wisdom": 2,
+			"charisma": 0
+		},
+		{
 			"name": "Sylph",
 			"list": 2,
 			"custom": 0,
@@ -166,6 +214,30 @@ var pointBuy = function () {
 			"intelligence": 2,
 			"wisdom": 0,
 			"charisma": 0
+		},
+		{
+			"name": "Sylph (Fume Sylph)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 2,
+			"constitution": -2,
+			"intelligence": 0,
+			"wisdom": 0,
+			"charisma": 2
+		},
+		{
+			"name": "Sylph (Lightning Sylph)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 2,
+			"constitution": 0,
+			"intelligence": 0,
+			"wisdom": -2,
+			"charisma": 2
 		},
 		{
 			"name": "Tengu",
@@ -188,6 +260,30 @@ var pointBuy = function () {
 			"dexterity": 2,
 			"constitution": 0,
 			"intelligence": 0,
+			"wisdom": 2,
+			"charisma": 0
+		},
+		{
+			"name": "Undine (Frost Undine)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 2,
+			"constitution": 0,
+			"intelligence": 2,
+			"wisdom": 0,
+			"charisma": -2
+		},
+		{
+			"name": "Undine (Vapor Undine)",
+			"list": 2,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 0,
+			"constitution": 2,
+			"intelligence": -2,
 			"wisdom": 2,
 			"charisma": 0
 		},
@@ -286,6 +382,18 @@ var pointBuy = function () {
 			"intelligence": 2,
 			"wisdom": 0,
 			"charisma": 2
+		},
+		{
+			"name": "Aphorite",
+			"list": 3,
+			"custom": 0,
+			"note":"",
+			"strength": 2,
+			"dexterity": -2,
+			"constitution": 0,
+			"intelligence": 2,
+			"wisdom": 0,
+			"charisma": 0
 		},
 		{
 			"name": "Aquatic Elf",
@@ -504,6 +612,18 @@ var pointBuy = function () {
 			"charisma": 0
 		},
 		{
+			"name": "Duskwalker",
+			"list": 3,
+			"custom": 0,
+			"note":"",
+			"strength": 0,
+			"dexterity": 2,
+			"constitution": -2,
+			"intelligence": 0,
+			"wisdom": 2,
+			"charisma": 0
+		},
+		{
 			"name": "Ganzi",
 			"list": 3,
 			"custom": 0,
@@ -549,6 +669,18 @@ var pointBuy = function () {
 			"constitution": 0,
 			"intelligence": 0,
 			"wisdom": 2,
+			"charisma": 0
+		},
+		{
+			"name": "Kobold",
+			"list": 3,
+			"custom": 0,
+			"note":"",
+			"strength": -4,
+			"dexterity": 2,
+			"constitution": -2,
+			"intelligence": 0,
+			"wisdom": 0,
 			"charisma": 0
 		},
 		{
@@ -948,18 +1080,6 @@ var pointBuy = function () {
 			"charisma": -2
 		},
 		{
-			"name": "Aphorite",
-			"list": 4,
-			"custom": 0,
-			"note":"",
-			"strength": 2,
-			"dexterity": -2,
-			"constitution": 0,
-			"intelligence": 2,
-			"wisdom": 0,
-			"charisma": 0
-		},
-		{
 			"name": "Cecaelia",
 			"list": 4,
 			"custom": 0,
@@ -1008,18 +1128,6 @@ var pointBuy = function () {
 			"charisma": -4
 		},
 		{
-			"name": "Duskwalker",
-			"list": 4,
-			"custom": 0,
-			"note":"",
-			"strength": 0,
-			"dexterity": 2,
-			"constitution": -2,
-			"intelligence": 0,
-			"wisdom": 2,
-			"charisma": 0
-		},
-		{
 			"name": "Fetchling",
 			"list": 4,
 			"custom": 0,
@@ -1065,18 +1173,6 @@ var pointBuy = function () {
 			"constitution": 0,
 			"intelligence": 0,
 			"wisdom": 2,
-			"charisma": 0
-		},
-		{
-			"name": "Kobold",
-			"list": 4,
-			"custom": 0,
-			"note":"",
-			"strength": -4,
-			"dexterity": 2,
-			"constitution": -2,
-			"intelligence": 0,
-			"wisdom": 0,
 			"charisma": 0
 		},
 		{
